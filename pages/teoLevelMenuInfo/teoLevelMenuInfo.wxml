@@ -1,0 +1,13 @@
+<!--pages/equipmentManage/equipmentManage.wxml-->
+<view class="tableHead">
+      <text class="id">序号</text>
+      <text class="projectName">工程名称</text>
+      <text class="projectName">区数</text>
+</view>
+<view class="container">
+    <view class="scroll-view-item" data-index="{{index+1}}" data-id="{{item.id}}" data-area="{{item.equpmentNumOfArea}}" bindtap="equipmentInfo" wx:for="{{tableData}}">
+            <text class="index">{{index+1}}</text>
+            <text class="name">{{item.name}}</text>
+            <text class="name">{{item.equpmentNumOfArea}}</text>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/equipmentManage/equipmentManage.wxml-->
+<view class="container">
+    <view class="tableHead">
+      <text class="id">序号</text>
+      <text class="projectName">项目名称</text>
+    </view>
+    <scroll-view class="table" scroll-y="true" bindscrolltolower="scroll" style="height: {{second_height}}px">
+        <view class="scroll-view-item" data-id="{{item.id}}" bindtap="munuInfo" wx:for="{{tableData}}">
+            <view class="names">
+              <text>{{index+1}}</text>
+              <text>{{item.name}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

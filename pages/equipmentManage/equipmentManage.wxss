@@ -1,0 +1,43 @@
+/* pages/equipmentManage/equipmentManage.wxss */
+.tableHead{
+  padding: 20rpx;
+  height: 40rpx;
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: rgb(130, 57, 53);
+  color: white;
+}
+.id{
+  width:20%
+}
+.projectName,.equipmentName{
+  flex:1;
+}
+.table{
+}
+.scroll-view-item{
+  text-align: center;
+  line-height: 120rpx;
+  height: 120rpx;
+  padding: 0 20rpx;
+  color: rgb(222, 211, 140);
+}
+.scroll-view-item:nth-child(even){
+  background-color: rgb(137, 190, 178);
+  color: white;
+}
+.scroll-view-item .names{
+  display: flex;
+  height: 120rpx;
+  font-size: 28rpx;
+}
+.scroll-view-item .names text:nth-child(1){
+  width: 20%;
+  text-align: center;
+}
+.scroll-view-item .names text:nth-child(2),.scroll-view-item .names text:nth-child(3){
+  flex: 1;
+}
+
+

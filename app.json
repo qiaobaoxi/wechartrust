@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menuManage/menuManage",
+    "pages/equipmentManage/equipmentManage",
+    "pages/menuInfo/menuInfo",
+    "pages/engineeringInfo/engineeringInfo",
+    "pages/engineering/engineering",
+    "pages/teoLevelMenuInfo/teoLevelMenuInfo",
+    "pages/equipmentInfo/equipmentInfo",
+    "pages/equipmentView/equipmentView"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/menuManage/menuManage",
+        "text": "项目管理"
+      },
+      {
+          "pagePath": "pages/equipmentView/equipmentView",
+          "text": "项目文件匹配"
+      },
+      {
+        "pagePath": "pages/equipmentManage/equipmentManage",
+        "text": "设备数据查看"
+      }
+    ]
+  }
+}

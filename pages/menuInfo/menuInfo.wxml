@@ -1,0 +1,45 @@
+<!--pages/menuManage/menuManage.wxml-->
+<!--pages/equipmentManage/equipmentManage.wxml-->
+<view class="container">
+    <view class="tableHead">
+      <text class="id">序号</text>
+      <text class="projectName">工程名称</text>
+      <text class="projectName">测试区</text>
+    </view>
+    <scroll-view class="table" scroll-y="true" bindscrolltolower="scroll" style="height: {{second_height}}px">
+        <view class="scroll-view-item" data-id="{{item.id}}" bindtap="munuInfo" wx:for="{{tableData}}">
+         <mp-slideview buttons="{{index%2===0?slideButtons:slideButtons1}}" data-id="{{item.id}}" icon="{{true}}" bindbuttontap="slideButtonTap">
+            <view class="names">
+              <text>{{item.index}}</text>
+              <text>{{item.name}}</text>
+              <text>{{item.equpmentNumOfArea}}</text>
+            </view>
+          </mp-slideview>    
+        </view>
+        <view class="add">
+            <button bindtap="slideButtonTap">添加工程</button>
+        </view>
+    </scroll-view>
+</view>
+<view class="wrap" style="display:{{isShow}};opacity:{{isOp}}">
+    <view class="box">
+        <view class="title">
+          <text>{{projectTitle}}</text>
+          <view class="close" bindtap="cancal">
+            <image src="/img/close.png"></image>
+          </view>
+        </view>
+        <view class="body">
+          <view class="editName">
+            <input class="input {{border}}" value="{{resetName}}"  bindfocus="focusName" bindinput="editname" placeholder="工程名称"/>
+          </view>
+          <view class="editName">
+            <input class="input {{border}}" value="{{resetAreaNum}}"  type="number"  bindfocus="focusName" bindinput="editareanum" placeholder="测试区"/>
+          </view>
+          <view class="btns">
+             <button bindtap="cancal">取消</button><button bindtap="save">保存</button>
+          </view>
+        </view>  
+    </view>
+</view>
+

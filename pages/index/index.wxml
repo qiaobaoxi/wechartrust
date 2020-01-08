@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="title">
+      <image src="/img/logo.jpg"></image>
+    </view>
+    <view class="account">
+      <text>账 户</text>
+    </view>
+    <view class="accountIpt">
+      <input bindinput="accountFn" />
+    </view>
+    <view class="password">
+      <text>密码</text>
+    </view>
+    <view class="passwordIpt">
+      <input password="true" bindinput="passwordFn"/>
+    </view>
+    <button class="login" bindtap="submitFu">登录</button>
+</view>

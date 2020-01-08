@@ -1,0 +1,45 @@
+<!--pages/menuManage/menuManage.wxml-->
+<!--pages/equipmentManage/equipmentManage.wxml-->
+<view class="container">
+    <view class="tableHead">
+      <text class="id">序号</text>
+      <text class="projectName">项目名称</text>
+      <text class="equipmentName">工程数量</text>
+    </view>
+    <scroll-view class="table" scroll-y="true" bindscrolltolower="scroll" style="height: {{second_height}}px">
+        <view class="scroll-view-item" data-id="{{item.id}}" bindtap="munuInfo" wx:for="{{tableData}}">
+         <mp-slideview buttons="{{index%2===0?slideButtons:slideButtons1}}" data-id="{{item.id}}" icon="{{true}}" bindbuttontap="slideButtonTap">
+            <view class="names">
+              <text>{{index+1}}</text>
+              <text>{{item.name}}</text>
+              <text>{{item.twoLevelMenu.length}}</text>
+            </view>
+          </mp-slideview>    
+        </view>
+        <view class="add">
+            <button bindtap="slideButtonTap">添加项目</button>
+        </view>
+    </scroll-view>
+</view>
+<view class="wrap" style="display:{{isShow}};opacity:{{isOp}}">
+    <view class="box">
+        <view class="title">
+          <text>{{projectTitle}}</text>
+          <view class="close" bindtap="cancal">
+            <image src="/img/close.png"></image>
+          </view>
+        </view>
+        <view class="body">
+          <view class="name" wx:if="{{projectTitle=='修改项目'?true:false}}">
+            <text>项目名称</text>：<text>{{name}}</text> 
+          </view>
+          <view class="editName">
+            <input class="input {{border}}" style="{{projectTitle=='修改项目'?'margin-left: 118rpx;':''}}" bindfocus="focusName" bindinput="editname" placeholder="名字"/>
+          </view>
+          <view class="btns">
+             <button bindtap="cancal">取消</button><button bindtap="save">保存</button>
+          </view>
+        </view>  
+    </view>
+</view>
+

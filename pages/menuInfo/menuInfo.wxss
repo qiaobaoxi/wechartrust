@@ -1,0 +1,143 @@
+/* pages/equipmentManage/equipmentManage.wxss */
+.tableHead{
+  padding: 20rpx;
+  height: 40rpx;
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: rgb(254,67, 101);
+  color: white;
+}
+.id{
+  width:20%
+}
+.projectName,.equipmentName{
+  flex:1;
+}
+.table{
+}
+.scroll-view-item{
+  text-align: center;
+  line-height: 120rpx;
+  height: 120rpx;
+  padding: 0 20rpx;
+  color: rgba(249, 205, 173, 1)
+}
+.scroll-view-item:nth-child(even){
+  background-color: rgb(252,157, 154);
+  color: white;
+}
+.scroll-view-item .names{
+  display: flex;
+  height: 120rpx;
+  font-size: 28rpx;
+}
+.scroll-view-item .names text:nth-child(1){
+  width: 20%;
+  text-align: center;
+}
+.scroll-view-item .names text:nth-child(2),.scroll-view-item .names text:nth-child(3){
+  flex: 1;
+}
+.add{
+  margin: 80rpx 0 60rpx 0;
+}
+.add button{
+  color: white;
+  background-color: #409EFF;
+  border: 1rpx solid #409EFF;
+}
+.wrap{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  animation: show 1s;
+}
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.wrap .box{
+  padding: 20rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10rpx;
+  width: 600rpx;
+  height: 500rpx;
+  background-color: white;
+}
+.box .title{
+  height: 60rpx;
+  border-bottom: 1rpx solid #303133;
+}
+.box .title text{
+  font-size: 30rpx;
+  color: #303133;
+}
+.box .name{
+  font-size: 24rpx;
+  font-weight: bold;
+  margin:  20rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.close{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.close image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.editName{
+  margin-top: 80rpx;
+}
+.input{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+}
+.ulBorder{
+  border: 1px solid #DCDFE6;
+}
+.ulBorder1{
+  border:1px solid #409EFF; 
+}
+.body .btns{
+  margin-top: 60rpx;
+  display: flex;
+}
+.body .btns button{
+  flex:1;
+  margin: 0 10rpx;
+  border-radius: 10rpx;
+}
+.body .btns button:nth-child(1){
+  background-color: white;
+  border: 1rpx solid #606266;
+  color: #606266;
+}
+.body .btns button:nth-child(2){
+  color: white;
+  background-color: #409EFF;
+  border: 1rpx solid #409EFF;
+}

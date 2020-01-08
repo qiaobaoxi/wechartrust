@@ -1,0 +1,49 @@
+/* pages/equipmentInfo/equipmentInfo.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+ec-canvas {
+  width: 100%;
+  height: 500rpx;
+}
+.container{
+  padding-bottom: 50rpx
+}
+.container button{
+  margin-top: 20rpx;
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+picker{
+  background-color: white;
+  padding: 0 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.tableHead{
+  display: flex;
+}
+.tableHead view{
+  flex: 1;
+  text-align: center;
+}
+.tableBody{
+    margin-top: 20rpx;
+    width: 100%;
+    height: 1200rpx;
+    overflow-x:scroll;
+    overflow-y:scroll;
+}
+.tableBody text{
+    margin: 4px; 
+    display: inline-block;
+    border:1px solid black;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px; 
+    padding: 4px;
+    vertical-align: middle;
+}

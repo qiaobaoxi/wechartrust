@@ -1,0 +1,49 @@
+<!--pages/menuManage/menuManage.wxml-->
+<!--pages/equipmentManage/equipmentManage.wxml-->
+<view class="container">
+    <view class="tableHead">
+      <text class="id">序号</text>
+      <text class="projectName">项目名称</text>
+      <text class="projectName">操作</text>
+    </view>
+    <scroll-view class="table" scroll-y="true" bindscrolltolower="scroll" style="height: {{second_height}}px">
+        <view class="scroll-view-item"   wx:for="{{tableData}}">
+            <view class="names">
+              <text>{{index+1}}</text>
+              <text>{{item.name}}</text>
+              <text bindtap="addEquipment" data-id="{{item.id}}" data-name="{{item.name}}">选择数据</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<view class="wrap" style="display:{{isShow}};opacity:{{isOp}}">
+    <view class="box">
+        <view class="title">
+          <text>{{projectTitle}}</text>
+          <view class="close" bindtap="cancal">
+            <image src="/img/close.png"></image>
+          </view>
+        </view>
+        <view class="body">
+          <view class="editName">
+            <text>项目名称：</text><text>{{menu}}</text>
+          </view>
+          <view class="picker"  bindtap="SelectEquipments">
+            <view wx:for="{{equipments}}">
+              <text>{{item.equipmentDataName}}</text>
+              <image src="/img/close.png" data-equipmentDataId="{{item.equipmentDataId}}" catchtap="DeleteSelected"></image>
+            </view>
+          </view>
+          <view class="picker selectPicker" wx:if="{{isSelect}}" >
+            <view wx:for="{{selectEquipments}}" data-i="{{index}}" bindtap="IsSelected" class="{{item.isSelect?'isSelect':''}}" >
+              <text>{{item.name}}</text>
+              <image src="/img/ok.png"  data-equipmentDataId="{{item.equipmentDataId}}" wx:if="{{item.isSelect}}" ></image>
+            </view>
+          </view>
+          <view class="btns">
+             <button bindtap="cancal">取消</button><button bindtap="save">保存</button>
+          </view>
+        </view>  
+    </view>
+</view>
+

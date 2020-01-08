@@ -1,0 +1,40 @@
+<!--pages/equipmentInfo/equipmentInfo.wxml-->
+<view class="container">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{areaArr}}">
+    <view class="picker">
+     <text>区号：</text>{{areaArr[index]}}
+    </view>
+  </picker>
+  <view class="tableHead" wx:if="{{isLoaded}}">
+      <view>
+        <text>{{date}}</text>
+      </view>
+      <view>
+        <text>工程号：{{engineerNum}}</text>
+        <text>区号：{{areaNum}}</text>
+      </view>
+  </view>
+  <view class="tableHead" wx:if="{{isLoaded}}">
+      <view>
+        <text>D={{diameter}}</text>
+        <text>{{passivation===0?'活化':'钝化'}}</text>
+      </view>
+      <view>
+        <text>x={{row}}</text>
+        <text>y={{column}}</text>
+      </view>
+      <view>
+        <text>使用天数{{howmanydays}}</text>
+      </view>
+  </view>
+  <view class="tableBody">
+                <view wx:for="{{tableData}}" wx:for-item="tableItem"  style="width:{{row*80}}rpx">
+                   <text wx:for="{{tableItem}}" style="background-color:{{item.color}}">{{item.value===65535?'':item.value}}</text>
+                </view>
+          </view>
+  
+  <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  <view>
+    <button  bindtap="downloadExcel">下载成excel</button>
+  </view>
+</view>
